@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 20px 40px; /* добавил боковые отступы */
+  max-width: 1400px; /* было 1200px - теперь шире */
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Цвета проекта */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #50535b;
+  --teal: #006e79;
+}

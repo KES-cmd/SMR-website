@@ -1,0 +1,126 @@
+.header {
+  background-color: #ffffff;
+  border-bottom: 2px solid var(--teal);
+  padding: 5px 0; /* минимальные вертикальные отступы */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+
+.header-container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0 80px; /* минимальные боковые отступы */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px; /* минимальный gap */
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 10px; /* минимальный отступ после логотипа */
+}
+
+.globe-icon {
+  width: 70px; /* чуть меньше, чтобы влезал в отступы */
+  height: 70px;
+  display: block;
+  object-fit: contain;
+}
+
+.header-nav {
+  display: flex;
+  gap: 70px; /* чуть меньше расстояние */
+  align-items: center;
+  margin-left: 60px; /* сдвигаем вправо */
+}
+
+.nav-link {
+  color: var(--black);
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+  transition: color 0.2s;
+  position: relative;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nav-link:hover {
+  color: var(--teal);
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--teal);
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.header-actions {
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+.join-btn {
+  background-color: var(--teal);
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 30px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.join-btn:hover {
+  background-color: #005a63;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 110, 121, 0.3);
+}
+
+/* Адаптив для мобильных устройств */
+@media (max-width: 768px) {
+  .header {
+    padding: 5px 0;
+  }
+
+  .header-container {
+    padding: 0 10px;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .header-nav {
+    gap: 25px;
+    margin-left: 15px;
+  }
+
+  .nav-link {
+    font-size: 16px;
+  }
+
+  .globe-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .join-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

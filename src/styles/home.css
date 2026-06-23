@@ -1,0 +1,46 @@
+.home-page {
+  padding: 40px 0;
+}
+
+.page-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--black);
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--teal);
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+.gallery-grid {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+  .home-page {
+    padding: 20px 0;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .page-title::after {
+    width: 60px;
+    height: 3px;
+    margin-top: 10px;
+  }
+}

@@ -1,0 +1,171 @@
+.council-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 30px;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0, 110, 121, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.council-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 110, 121, 0.12);
+}
+
+.council-card-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Фото по центру */
+.council-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--teal);
+  box-shadow: 0 4px 16px rgba(0, 110, 121, 0.2);
+  margin-bottom: 24px;
+  flex-shrink: 0;
+}
+
+.council-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Информация вокруг фото */
+.council-info {
+  width: 100%;
+  text-align: center;
+}
+
+.council-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.council-position {
+  font-size: 18px;
+  color: var(--teal);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.council-description {
+  font-size: 16px;
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Прямоугольники с текстом */
+.council-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.council-item {
+  background: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  border-left: 3px solid var(--teal);
+}
+
+.council-item:hover {
+  background: #f0f4f5;
+  border-color: var(--teal);
+  transform: translateX(4px);
+}
+
+.item-icon {
+  color: var(--teal);
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.item-text {
+  font-size: 15px;
+  color: var(--black);
+  line-height: 1.4;
+  text-align: left;
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+  .council-card {
+    padding: 30px 20px;
+  }
+
+  .council-photo {
+    width: 160px;
+    height: 160px;
+  }
+
+  .council-name {
+    font-size: 24px;
+  }
+
+  .council-items {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .council-card {
+    padding: 24px 16px;
+    margin-bottom: 30px;
+  }
+
+  .council-photo {
+    width: 130px;
+    height: 130px;
+  }
+
+  .council-name {
+    font-size: 20px;
+  }
+
+  .council-position {
+    font-size: 16px;
+  }
+
+  .council-description {
+    font-size: 14px;
+  }
+
+  .council-items {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .council-item {
+    padding: 12px 14px;
+  }
+
+  .item-text {
+    font-size: 14px;
+  }
+}

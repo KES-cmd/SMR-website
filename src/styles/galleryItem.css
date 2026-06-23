@@ -1,0 +1,106 @@
+.gallery-item {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+/* Когда фото слева */
+.gallery-item.left {
+  flex-direction: row;
+}
+
+/* Когда фото справа */
+.gallery-item.right {
+  flex-direction: row-reverse;
+}
+
+.gallery-image {
+  flex: 1;
+  max-width: 50%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image img:hover {
+  transform: scale(1.02);
+}
+
+.gallery-text {
+  flex: 1;
+  max-width: 40%;
+  padding: 20px;
+}
+
+.gallery-text h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--black);
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.gallery-text p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--gray);
+}
+
+/* Адаптив для планшетов */
+@media (max-width: 1024px) {
+  .gallery-item {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .gallery-text h3 {
+    font-size: 24px;
+  }
+
+  .gallery-text p {
+    font-size: 16px;
+  }
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .gallery-item {
+    flex-direction: column !important;
+    gap: 20px;
+    padding: 0 10px;
+    margin-bottom: 40px;
+  }
+
+  .gallery-image {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .gallery-image img {
+    height: 250px;
+  }
+
+  .gallery-text {
+    max-width: 100%;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .gallery-text h3 {
+    font-size: 20px;
+  }
+
+  .gallery-text p {
+    font-size: 15px;
+  }
+}

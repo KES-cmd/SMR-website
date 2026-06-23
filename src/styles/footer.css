@@ -1,0 +1,44 @@
+.footer {
+  background-color: var(--gray);
+  color: white;
+  padding: 30px 0; /* было 20px - увеличил */
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1400px; /* было 1200px - сделал шире */
+  margin: 0 auto;
+  padding: 0 40px; /* увеличил боковые отступы */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social {
+  display: flex;
+  gap: 16px; /* было 12px */
+  align-items: center;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+  font-size: 18px; /* было 16px - увеличил */
+}
+
+.social-link:hover {
+  color: #b0d4d8;
+  text-decoration: underline;
+}
+
+.social-divider {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 18px; /* добавил размер */
+}
+
+.footer-copy {
+  font-size: 16px; /* было 14px */
+  opacity: 0.8;
+}
